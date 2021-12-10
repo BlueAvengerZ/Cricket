@@ -1,0 +1,314 @@
+/* Font styling Start */
+
+
+/* legger til font */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+/* Font styling End */
+
+
+
+/* all elements styling Start */
+
+
+/* gir alle elementer posisjon og størrelse. også fjerner text stil til alle elementer  */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+
+
+/* all elements styling End */
+
+
+
+
+
+
+
+
+/* menu-bar styling Start */
+
+
+
+/* gir posisjon for menu bar. */
+
+.max-width {
+  padding: 0 80px;
+  margin: auto;
+}
+
+
+/* gir menu bar posisjon, bredde, verdi og font.
+  også hvor mye tid skal den ta, til menu bar får bakgunnsfarge blå. */
+
+.menu-bar {
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    right: 1px;
+    padding: 30px 0;
+    font-family: "Ubuntu", sans-serif;
+    transition: 0.3s;
+}
+
+
+.menu a {
+  position: relative;
+  color: #fff;
+  padding:15px;
+  top:8px;
+  text-decoration: none;
+}
+
+.menu-bar .active {
+  color: red;
+  border-bottom: 1px solid red;
+}
+
+.menu-bar a:hover {
+  color: lightblue;
+  border-bottom: 1px solid red;
+}
+
+
+/* når man blar ned, får menu bar bakgunnsfarge blå. */
+
+.menu-bar.sticky {
+  margin: 0 -1px;
+  padding: 15px 0;
+  background: rgba(178, 34, 34, 0.959);
+  transition: color 0.3s;
+
+
+}
+
+
+/* gir posisjon for menu bar og mellerom */
+
+.menu-bar .max-width {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* gir hvit farge til kallenavn min og hvor mye tykt skal den være */
+
+.menu-bar .nickname a {
+  color: tomato;
+  font-size: 35px;
+  font-weight: 600;
+  }
+
+
+/* gir blå farge til forkortelse av kallenavn min. */
+
+.menu-bar .nickname a span{
+  color: red;
+  transition: color 0.3s;
+
+
+}
+
+/* når man blar ned, bytter forkortelse av kallenavn min, farge til hvit. */
+
+.menu-bar.sticky .nickname a span {
+  color: white;
+}
+
+
+/* gir retning for menu bar tittelene */
+
+.menu-bar {
+  display: inline-block;
+}
+
+
+/* gir fontstørrelse og hvit farge til menu bar tittel.
+   Også hvor mye tykt skal den være og hvor mye tid skal den ta, til den bytter farge. */
+
+.menu-bar {
+  color: white;
+  font-size: 15px;
+  font-weight: 400;
+  margin-left: 14px;
+  transition: color 0.3s;
+}
+
+
+
+
+/* menu-bar styling End */
+
+/* alle seksjoner tittel får font, posisjon, fontstørrelse og hvor mye tykt skal de være. */
+
+section .title {
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+
+/* legger til innhold bokser som er Nyeste oppdatering
+ og gir de posisjon, bredde, høyde og bakgrunn svart */
+
+section .title::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 350px;
+  height: 3px;
+  background: white;
+  transform: translate(-50%);
+}
+
+
+/* gir posisjon, fontstørrelse og bakgrunn hvit, til innhold tekst som er Nysete oppdatering. */
+
+section .title::after {
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  font-size: 18px;
+  color: crimson;
+  padding: 5px;
+  background: black;
+  transform: translate(-50%);
+}
+  
+/* Legger til innhold tekst som er Nysete oppdatering. */
+
+  section .title::after {
+  content: 'Oversikt over Spillere og Klubber:';
+ }
+
+  
+
+
+
+
+/* Homepage styling Start */
+
+
+/* legger til bakgrunn for homepage min. etter det gir jeg font, hvit farge, posisjon
+   og bakgrunnshøyde til homepage min. Også sier jeg at, bakgrunne skal dekke hele homepage. */
+
+.homepage {
+  display: flex;
+  background: url("/Bilder/background-15.jpeg");
+  height: 100vh;
+  color: white;
+  background-size: cover;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+
+/* gir posisjon til homepage min. */
+
+ .homepage .max-width {
+   margin: auto 0 auto 40px;
+ }
+
+
+ /* gir fontstørrelse  til homepage tekst nummer 1. */
+
+ .homepage .text-1 {
+   font-size: 27px;
+ }
+
+
+ /* gir fontstørrelse og posisjon til homepage tekst nummer 2. også hvor mye tykt skal den være. */
+
+ .homepage .text-2 {
+     max-width: 100%;
+     font-size: 65px;
+     font-weight: 600;
+     margin-top: -25px;
+     margin-left: -18px;
+ }
+
+ /* gir fontstørrelse og posisjon til homepage tekst nummer 3. */
+
+ .homepage .text-3 {
+     font-size: 40px;
+     margin: 2px 0;
+     margin-left: -18px;
+ }
+
+
+ /* gir turkish farge til teksten som blir skrevet i homepage. Også hvor mye tykt skal den være */
+
+ .homepage .text-3 span {
+    color: red;
+    font-weight: 500;
+    margin-top: 3px;
+ }
+
+/* Homepage styling End */
+
+
+
+
+#box {
+    position: relative;
+    width: 910px;
+    height: 390px;
+    right: 10%;
+    margin-top: 15%;
+    border: 2px solid grey;
+    box-shadow: 0 5px 38px red;
+    background: url("/Bilder/background-7.jpeg");
+    background-size: cover;
+    border-radius: 20px;
+  }
+
+.button {
+    position: relative;
+    background-color: black;
+    color:white;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    top: 85px;
+    right: 507px;
+  }
+  
+  .bks {
+        position: relative;
+        top: 55px;
+        left: 10px;
+        color:deepskyblue;
+    }
+
+    #txt{
+        position: relative;
+        width: 150px;
+        padding: 2px;
+        top: 25px;
+        border-radius: 5px;
+
+      }
+
+    #bkve {
+         position: relative;
+         width: 500px;
+         top: 45px;
+         border-radius: 5px;
+    }
+
+    h1 {
+        position: relative;
+        top: 30px;
+        left: 15px;
+        color: white;
+    }
+  
